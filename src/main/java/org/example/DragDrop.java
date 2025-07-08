@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.List;
+
 public class DragDrop {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
@@ -32,13 +34,19 @@ public class DragDrop {
             WebElement iframe = driver.findElement(By.cssSelector(".demo-frame.lazyloaded"));
         driver.switchTo().frame(iframe);
 
-        WebElement draggableItem = driver.findElement(By.xpath("//*[@id=\"gallery\"]/li[3]"));
+//        WebElement draggableItem = driver.findElement(By.xpath("//*[@id=\"gallery\"]/li[3]"));
+        List<WebElement> draggableItems = driver.findElements(
+                By.cssSelector(".ui-widget-content.ui-corner-tr.ui-draggable.ui-draggable-handle")
+        );
         WebElement droppablePlace = driver.findElement(By.id("trash"));
 
         Thread.sleep(3000);
 
         Actions action = new Actions(driver);
-        action.dragAndDrop(draggableItem,droppablePlace).build().perform();
 
+        for(WebElement draggableItem:draggableItems){
+            Thread.sleep(2000);
+        action.dragAndDrop(draggableItem,droppablePlace).build().perform();
+}
     }
 }
