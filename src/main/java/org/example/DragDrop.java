@@ -46,6 +46,7 @@ public class DragDrop {
 
         for(WebElement draggableItem:draggableItems){
             Thread.sleep(2000);
+
         action.dragAndDrop(draggableItem,droppablePlace).build().perform();
 }
     }
