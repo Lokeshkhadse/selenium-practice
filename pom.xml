@@ -30,6 +30,7 @@
             <version>8.0.33</version>
         </dependency>
 
+<!--        Test NG depedency-->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
