@@ -1,0 +1,101 @@
+// ================================================
+// ? Selenium + Database Integration Scenarios
+// ================================================
+
+/*
+  1?? Scenario: Form Submission Verification
+  ------------------------------------------------
+  Selenium ? Fill "Register" form ? Submit
+         ?
+  Connect to DB ? Run SELECT query to check if record was inserted correctly
+*/
+
+
+/*
+  2?? Scenario: User Login Precondition Setup
+  ------------------------------------------------
+  Connect to DB ? INSERT a test user
+         ?
+  Selenium ? Login with test user
+         ?
+  Assert successful login or dashboard page
+*/
+
+
+/*
+  3?? Scenario: Cleanup Test Data After Execution
+  ------------------------------------------------
+  Selenium ? Add product/order/review via UI
+         ?
+  Connect to DB ? DELETE test record to reset state
+*/
+
+
+/*
+  4?? Scenario: Validate UI Table Data Against DB
+  ------------------------------------------------
+  Connect to DB ? SELECT product list
+         ?
+  Selenium ? Read UI table rows
+         ?
+  Compare both datasets (DB vs UI)
+*/
+
+
+/*
+  5?? Scenario: Verify Deletion Reflects in DB
+  ------------------------------------------------
+  Selenium ? Delete user/order from UI
+         ?
+  Connect to DB ? Ensure record no longer exists using SELECT
+*/
+
+
+/*
+  6?? Scenario: Dropdown Prepopulation Check
+  ------------------------------------------------
+  Connect to DB ? SELECT all categories/cities
+         ?
+  Selenium ? Read dropdown values
+         ?
+  Match DB results with UI options
+*/
+
+
+/*
+  7?? Scenario: Validate Timestamps (created_at / updated_at)
+  ------------------------------------------------
+  Selenium ? Submit or update a form
+         ?
+  Connect to DB ? Check timestamp field in that record
+*/
+
+
+/*
+  8?? Scenario: OTP or Token Retrieval for Verification
+  ------------------------------------------------
+  Selenium ? Trigger Forgot Password or Send OTP
+         ?
+  Connect to DB ? SELECT latest token/OTP
+         ?
+  Selenium ? Input OTP/token for next step
+*/
+
+
+/*
+  9?? Scenario: Record Update Verification
+  ------------------------------------------------
+  Selenium ? Edit user profile (name/email) via UI
+         ?
+  Connect to DB ? SELECT and validate updated data
+*/
+
+
+/*
+  ?? Scenario: Auto-generated Field Verification
+  ------------------------------------------------
+  Selenium ? Create booking/order/user
+         ?
+  Connect to DB ? Check auto-generated ID or reference number
+*/
+
