@@ -9,7 +9,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class codeLogicTestNG {
+public class CodeLogicTestNG {
 
     WebDriver driver;
 

@@ -10,4 +10,10 @@ public class MyFirstTest {
         int sum = 5 + 3;
         Assert.assertEquals(sum, 8);
     }
+
+    @Test
+    public void substraction(){
+        int sub = 5-3;
+        Assert.assertEquals(sub ,2);
+    }
 }

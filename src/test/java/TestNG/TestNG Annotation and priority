@@ -1,9 +1,9 @@
 1. @BeforeSuite      ➤ Runs once before everything (e.g., setup DB, reports)
-2. @BeforeTest       ➤ Before <test> in testng.xml
+2. @BeforeTest       ➤ Before any <test> in testng.xml
 3. @BeforeClass      ➤ Before first method in the current class
 4. @BeforeMethod     ➤ Runs before each @Test method
 5. @Test             ➤ The actual test case(s)
 6. @AfterMethod      ➤ Runs after each @Test method
 7. @AfterClass       ➤ After all methods in the current class
-8. @AfterTest        ➤ After <test> in testng.xml
+8. @AfterTest        ➤ After all  <test> in testng.xml
 9. @AfterSuite       ➤ Runs once after everything (cleanup)
