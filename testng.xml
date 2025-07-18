@@ -1,0 +1,49 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="IdealTestSuite" parallel="false">
+
+    <!-- 🔹 Global parameter accessible in any test class using @Parameters -->
+    <parameter name="browser" value="chrome" />
+
+    <!-- ✅ Test Block 1: Run selected test methods from multiple classes -->
+    <test name="SelectedMethodExecution">
+        <classes>
+            <class name="TestNG_xml_config_classes.LoginTests">
+                <methods>
+                    <include name="validLoginTest" />
+                    <include name="logoutTest" />
+                </methods>
+            </class>
+
+            <class name="TestNG_xml_config_classes.DashboardTests">
+                <methods>
+                    <exclude name="adminDashboardTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- ✅ Test Block 2: Run all tests except specific groups -->
+    <test name="ExcludeGroupExecution">
+        <groups>
+            <run>
+                <exclude name="regression" />
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNG_xml_config_classes.ProductTests" />
+        </classes>
+    </test>
+
+    <!-- ✅ Test Block 3: Run only group = smoke -->
+    <test name="SmokeTestGroup">
+        <groups>
+            <run>
+                <include name="smoke" />
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNG_xml_config_classes.OrderTests" />
+        </classes>
+    </test>
+
+</suite>
